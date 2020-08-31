@@ -16,6 +16,9 @@ article_tag1: Java
 article_tag2: Object Class
 article_section: Java공부
 meta_keywords: java, Object class
+tags:
+  - Java
+  - Java basic
 ---
 
 * Object 클래스는 자바의 최상위 클래스이다.

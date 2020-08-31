@@ -16,7 +16,10 @@ article_tag1: Java
 article_tag2: String class
 article_tag3: basic
 article_section: Java공부
-meta_keywords: java, basic
+meta_keywords: java
+tags:
+  - Java
+  - Java basic
 ---
 
 # Wrapper(포장)클래스

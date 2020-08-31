@@ -3,7 +3,6 @@ title: "깃허브 블로그 첫글"
 categories:
   - github blog
 tags:
-  - test
   - markdown
 ---
 
