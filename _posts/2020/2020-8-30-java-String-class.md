@@ -22,6 +22,8 @@ tags:
   - Java basic
 ---
 
+![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+
 ## String 레퍼런스
 String은 자바 기본 타입이 아니다. 클래스이다! 
 `String s1;` 여기서 s1은 String 인스턴스 주소를 담는 레퍼런스이다.

@@ -9,6 +9,8 @@ tags:
   - OOP
 ---
 
+![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+
 ## 상속
 
 아래는 자바 API에서 명시한 상속의 개념이다.

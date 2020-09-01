@@ -9,6 +9,8 @@ tags:
   - OOP
 ---
 
+![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+
 ## 클래스 로딩 과정
 $ java com.eomcs.oop.ex03.Exam0130
 1) 클래스 파일 'Exam0130.class'을 찾는다.

@@ -21,6 +21,8 @@ tags:
   - Java basic
 ---
 
+![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+
 * Object 클래스는 자바의 최상위 클래스이다.
 클래스를 정의할 때 수퍼클래스를 지정하지 않으면 컴파일러는 자동으로 Object를 상속받는다.
 자바의 모든 클래스는 Object의 자손이기 때문에 당연히 Object의 메서드를 사용할 수 있다.

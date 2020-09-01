@@ -9,6 +9,8 @@ tags:
   - OOP
 ---
 
+![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+
 * 객체지향을 잘 하고싶다면 모든 인스턴스를 사람처럼 생각해보자.
 `obj1.print3();`
 야 obj야 너 print3(); 해봐! (사람에게 일 시키듯)

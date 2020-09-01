@@ -22,6 +22,8 @@ tags:
   - Java basic
 ---
 
+![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+
 ## 비트이동연산자?
 비트연산자는 정수값을 비트 단위로 연산할 수 있다.
 1은 true, 0은 false라고 간주하고 계산한다. 출력 결과도 정수이다.

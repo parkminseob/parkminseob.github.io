@@ -22,6 +22,8 @@ tags:
   - Java basic
 ---
 
+![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+
 # Wrapper(포장)클래스
 
 자바는 primitive data type(*기본타입* byte, int, short, char, long, float, double, boolean)값을 다룰 때 기본 연산자 외에 좀 더 다양한 방법으로 다루기 위해 Primitive data type에 대응하는 클래스를 제공한다.
