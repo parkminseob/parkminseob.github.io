@@ -1,5 +1,5 @@
 ---
-title: 자바 제네릭(Generic) 문법
+title: 자바 - 제네릭(Generic) 문법
 layout: single
 author_profile: true
 read_time: true
@@ -20,6 +20,9 @@ tags:
   - Java basic
   - Generic
 ---
+
+![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+
 
 # 제네릭(Generic)
 

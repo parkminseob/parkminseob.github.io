@@ -1,5 +1,5 @@
 ---
-title: "오버로딩, 오버라이딩, 캡슐화"
+title: "자바 - 오버로딩, 오버라이딩, 캡슐화"
 toc : true
 categories:
   - Java

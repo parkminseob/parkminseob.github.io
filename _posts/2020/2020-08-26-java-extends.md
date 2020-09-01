@@ -1,5 +1,5 @@
 ---
-title: "상속과 다형성"
+title: "자바 - 상속과 다형성"
 toc : true
 categories:
   - Java

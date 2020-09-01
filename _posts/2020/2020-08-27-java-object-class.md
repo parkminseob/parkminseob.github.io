@@ -1,5 +1,5 @@
 ---
-title: Object클래스
+title: 자바 - Object클래스
 layout: single
 author_profile: true
 read_time: true

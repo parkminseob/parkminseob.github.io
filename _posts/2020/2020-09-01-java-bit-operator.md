@@ -1,5 +1,5 @@
 ---
-title: 비트이동연산자
+title: 자바 - 비트이동연산자
 layout: single
 author_profile: true
 read_time: true

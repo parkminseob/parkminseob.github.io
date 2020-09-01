@@ -1,5 +1,5 @@
 ---
-title: "클래스의 로딩과정과 JVM이 관리하는 메모리"
+title: "자바 - 클래스의 로딩과정과 JVM이 관리하는 메모리"
 toc : true
 categories:
   - Java
