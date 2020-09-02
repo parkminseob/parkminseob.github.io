@@ -35,6 +35,11 @@ tags:
   * 웹 브라우저에서 이전 페이지로 따라 올라 갈 때
   * 자바스크립트에서 이벤트를 처리할 때 버블링 단계를 수행(조상) 엘리먼트를 따라 올라가면서 처리하는 것)
 
+  ## Stack의 주요 메서드
+  * push(E item) : 주어진 객체를 스택이 넣는다
+  * peek() : 스택의 맨 위 객체를 가져온다. 객체를 스택에서 제거하지 않는다.
+  * pop() : 스택의 맨 위 객체를 가져온다. 객체를 스택에서 제거한다.
+
 ```java
   public static void main(String[] args) throws Exception {
     MyStack<String> stack = new MyStack<>();
@@ -81,6 +86,11 @@ tags:
   * 등록된 예약을 처리할 때 
   * 네트워킹에서 연결된 순서대로 소켓을 승인하고 처리할 때
 
+  ## Queue의 주요 메서드
+  * offer(E e) : 주어진 객체를 넣는다.
+  * peek() : 제일 앞에 있는 객체를 가져온다. 객체를 큐에서 제거하지 않는다.
+  * poll() : 객체 하나를 가져온다. 객체를 큐에서 제거한다.
+
 ```java
   public static void main(String[] args) throws Exception {
     MyQueue<String> queue = new MyQueue<>();
@@ -110,3 +120,6 @@ tags:
     System.out.println();
   }
 ```
+
+> Stack과 Queue모두 poll, pop을 통해 값을 꺼내면 본래의 값은 remove되어 없어진다.  
+그러므로 출력할때 본래 값을 온전히 두고 출력하고 싶다면, shallow copy가 아닌 deep copy를 통해 값을 복사하여 꺼내는 것이 좋다.
