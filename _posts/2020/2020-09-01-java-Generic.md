@@ -7,14 +7,14 @@ comments: true
 share: true
 related: true
 categories:
-- JAVA
+- Java
 toc: true
 toc_sticky: true
 toc_label: on this page
 article_tag1: Java
 article_tag2: basic
 article_section: Java공부
-meta_keywords: java
+meta_keywords: Java
 tags:
   - Java
   - Java basic
@@ -111,7 +111,7 @@ static class MemberBox {
 1. 다루는 타입을 제한할 수 있다. (개발자가 직접 타입을 지정 가능하다.)
 2. 제네릭을 지정하면 그와 관련된 메서드의 타입 정보가 자동으로 바뀐다.
 
-### 문법 : 클래스명<타입명>
+### 1) 문법 : 클래스명<타입명>
 ```java
     ArrayList<Member> list = new ArrayList<Member>();
 
@@ -126,7 +126,7 @@ static class MemberBox {
     // 이렇게 해줘도 컴파일은 통과하지만, 후에 오류가 발생활 확률이 매우 높다.
 ```
 
-### 제네릭을 Object(상속관계)로 적용 했을 때 
+### 2) 제네릭을 Object(상속관계)로 적용 했을 때 
 
 쉽게 이해하기 위해 예시를 한글로 들었다.
 ```java
@@ -149,7 +149,7 @@ static class MemberBox {
 
 ```
 
-### 제네릭의 타입을 제대로 지정해 주지 않았을 경우
+### 3) 제네릭의 타입을 제대로 지정해 주지 않았을 경우
 ```java
   static class A {}
   static class B1 extends A {}
@@ -189,7 +189,7 @@ static class MemberBox {
   }
 
 ```
-### 1) 무엇이든 받을 수 있는 타입 <?>
+### 4) 무엇이든 받을 수 있는 타입 <?>
 <?>는 보이는 것 처럼 ? 안에 무슨 값이든 들어 갈 수 있다.  
 컴파일러는 파라미터로 받은 ArrayList가 어떤 타입의 값을 다루는 지 알 수 없기 때문에
 그 타입인지 검사해야 하는 메서드를 사용할 때는 컴파일을 명확하게 해줄 수 없다.  
@@ -205,7 +205,7 @@ static class MemberBox {
 ```
 > 즉 <?>는 값을 조회할 때는 유용하나 값을 추가할때는 적절하지 못하다.
 
-### 2) <? extends class>
+### 5) <? extends class>
 이 문법은 class를 상속받은 ? 값을 받겠다는 뜻이다.
 
 ```java

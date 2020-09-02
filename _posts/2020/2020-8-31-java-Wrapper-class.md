@@ -7,7 +7,7 @@ comments: true
 share: true
 related: true
 categories:
-- JAVA
+- Java
 toc: true
 toc_sticky: true
 toc_label: on this page
@@ -16,7 +16,7 @@ article_tag1: Java
 article_tag2: String class
 article_tag3: basic
 article_section: Java공부
-meta_keywords: java
+meta_keywords: Java
 tags:
   - Java
   - Java basic

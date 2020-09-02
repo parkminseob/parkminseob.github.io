@@ -7,7 +7,7 @@ comments: true
 share: true
 related: true
 categories:
-- JAVA
+- Java
 toc: true
 toc_sticky: true
 toc_label: on this page
@@ -15,7 +15,7 @@ description: Object클래스의 구조와 중요 메서드에 대한 설명
 article_tag1: Java
 article_tag2: Object Class
 article_section: Java공부
-meta_keywords: java, Object class
+meta_keywords: Java, Object class
 tags:
   - Java
   - Java basic
