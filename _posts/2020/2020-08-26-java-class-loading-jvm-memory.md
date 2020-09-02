@@ -12,8 +12,8 @@ tags:
 ![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
 
 ## 클래스 로딩 과정
-$ java com.eomcs.oop.ex03.Exam0130
-1) 클래스 파일 'Exam0130.class'을 찾는다.
+$ java com.eomcs.oop.ex03.Exam0130  
+1) 클래스 파일 'Exam0130.class'을 찾는다.  
    - JDK가 설치된 폴더의 하위 폴더인 /lib에서 찾는다.
    - OS의 CLASSPATH 환경 변수에 설정된 디렉토리를 탐색하여 찾는다.
    - JVM을 실행할 때 -classpath 또는 -cp 옵션으로 설정된 디렉토리를 탐색하여 찾는다.

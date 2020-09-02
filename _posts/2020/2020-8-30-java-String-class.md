@@ -25,7 +25,7 @@ tags:
 ![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
 
 ## String 레퍼런스
-String은 자바 기본 타입이 아니다. 클래스이다! 
+String은 자바 기본 타입이 아니다. 클래스이다!  
 `String s1;` 여기서 s1은 String 인스턴스 주소를 담는 레퍼런스이다.
 
 * String 인스턴스
@@ -33,13 +33,13 @@ String은 자바 기본 타입이 아니다. 클래스이다!
     s1 = new String("Hello");
 	String s2 = new String ("Hello");
 ```
-heap영역에 Hello문자 코드를 저장할 메모리를 만들고 그 주소를 리턴한다. 내용물의 동일 여부를 검사하지 않고 무조건 인스턴스를 생성한다! 
+heap영역에 Hello문자 코드를 저장할 메모리를 만들고 그 주소를 리턴한다. 내용물의 동일 여부를 검사하지 않고 무조건 인스턴스를 생성한다!  
 가비지가 되면 가비지 컬렉터에 의해 제거된다.
 
 `System.out.println(s1 == s2);` 결과값은 false이다.
 
 ## String 문자열 리터럴
-String constant pool(String 상수풀) 메모리 영역에 String 인스턴스를 생성한다. 내용물이 같으면 기존 인스턴스의 주소를 리턴한다. 
+String constant pool(String 상수풀) 메모리 영역에 String 인스턴스를 생성한다. 내용물이 같으면 기존 인스턴스의 주소를 리턴한다.   
 즉 메모리 절약을 위해 중복 데이터를 갖는 인스턴스는 생성하지 않는다! 상수풀에 생성된 메모리는 JVM이 끝날 때 까지 유지된다.
 ```java
 String x1 = "Hello";
@@ -108,9 +108,9 @@ StringBuffer클래스는 String과 같이 문자열을 출력하는 클래스이
     System.out.println(b1.equals(b2)); // false
 
 ```
-어? equals()메서드를 썼는데도 결과값이 false가 나온다.
- 왜일까? StringBuffer는 Object클래스에서 상속받은 equals()를 오버라이딩 하지 않았기 때문이다.
-  StringBuffer에 들어있는 문자열을 비교하고 싶다면, toString()을 이용해 비교해야 한다.
+어? equals()메서드를 썼는데도 결과값이 false가 나온다.  
+왜일까? StringBuffer는 Object클래스에서 상속받은 equals()를 오버라이딩 하지 않았기 때문이다.  
+StringBuffer에 들어있는 문자열을 비교하고 싶다면, toString()을 이용해 비교해야 한다.
 
 ```java
     StringBuffer b1 = new StringBuffer("Hello");
@@ -125,13 +125,13 @@ StringBuffer클래스는 String과 같이 문자열을 출력하는 클래스이
 ```
 
 ### mutable vs immutable
-String과 StringBuffer의 가장 큰 차이점이다. 
+String과 StringBuffer의 가장 큰 차이점이다.   
 String은 immutable객체로, 한번 객체에 값을 담으면 변경할 수 없다!
 ```java
     String s1 = new String("Hello");
     String s2 = s1.replace('l', 'x');
 ```
-replace메서드를 써서 문자열 l을 x로 대체했다. 하지만 String은 immutable이므로, 원본 문자열이 바뀌는 것이 아니라 새로운 String 객체를 생성하여 리턴한다.
+replace메서드를 써서 문자열 l을 x로 대체했다. 하지만 String은 immutable이므로, 원본 문자열이 바뀌는 것이 아니라 새로운 String 객체를 생성하여 리턴한다.  
 반면에 StringBuffer클래스는 mutable로, 인스턴스의 데이터를 변경할 수 있다. 
 ```java
     StringBuffer buf = new StringBuffer("Hello");
@@ -145,7 +145,7 @@ replace메서드를 써서 문자열 l을 x로 대체했다. 하지만 String은
 
 ## toString() 메서드
 ---------------
-Object에서 상속받은 toString()은 "클래스명@해시값"을 리턴한다. String은 상속받은 toString()을 오버라이딩했다. 그래서 this주소를 그대로 리턴한다.
+Object에서 상속받은 toString()은 "클래스명@해시값"을 리턴한다.   String은 상속받은 toString()을 오버라이딩했다. 그래서 this주소를 그대로 리턴한다.
 ```java
     String s1 = new String("Hello");
     String s2 = s1.toString();
@@ -162,7 +162,7 @@ Object에서 상속받은 toString()은 "클래스명@해시값"을 리턴한다
 
 ## String의 다양한 생성자 활용
 ----------------
-String 인스턴스는 내부적으로 문자의 코드값을 저장할 char배열 또는 byte배열을 생성한다.
+String 인스턴스는 내부적으로 문자의 코드값을 저장할 char배열 또는 byte배열을 생성한다.  
  문자열을 다룰 일이 많으므로 String 문자배열을(특히 한글) 정확한 문자표에 따라 출력할 수 있도록 생성자에 바이트 배열을 넘겨줄 때 배열에 들어 있는 코드 값이 어떤 문자표 코드 값인지 알려줘야 한다.
 
 ``` java
