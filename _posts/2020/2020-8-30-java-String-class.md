@@ -22,7 +22,7 @@ tags:
   - Java basic
 ---
 
-![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+![java-logo](/home/sub/parkminseob.github.io/assets/images/post/java/java-logo.png)
 
 ## String 레퍼런스
 String은 자바 기본 타입이 아니다. 클래스이다!  

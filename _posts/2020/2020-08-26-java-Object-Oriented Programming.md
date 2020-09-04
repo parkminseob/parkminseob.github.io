@@ -15,7 +15,7 @@ tags:
   - Java basic
 ---
 
-![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+![java-logo](/home/sub/parkminseob.github.io/assets/images/post/java/java-logo.png)
 
 
 ### 객체지향 프로그래밍

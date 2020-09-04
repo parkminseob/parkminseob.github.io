@@ -21,7 +21,7 @@ tags:
   - Java basic
 ---
 
-![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+![java-logo](/home/sub/parkminseob.github.io/assets/images/post/java/java-logo.png)
 
 * Object 클래스는 자바의 최상위 클래스이다.  
 클래스를 정의할 때 수퍼클래스를 지정하지 않으면 컴파일러는 자동으로 Object를 상속받는다.  
@@ -31,19 +31,19 @@ tags:
 
 1) toString()
    => 클래스이름과 해시코드를 리턴한다.
-   
+
 2) equals()
    => 같은 인스턴스인지 검사한다.
-   
+
 3) hashCode()
    => 인스턴스를 식별하는 값을 리턴한다.
-   
+
 4) getClass()
    => 인스턴스의 클래스 정보를 리턴한다.
-   
+
 5) clone()
    => 인스턴스를 복제한 후 그 복제 인스턴스를 리턴한다.
-   
+
 6) finalize()
    => 가비지 컬렉터에 의해 메모리에서 해제되기 직전에 호출된다. C를 쓰던 사람들이 자주 호출하려는 명령. 존재하긴 하지만 없는 메서드라 생각하고 기억에서 지우자.
 

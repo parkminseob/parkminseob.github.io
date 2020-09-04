@@ -9,7 +9,7 @@ tags:
   - OOP
 ---
 
-![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+![java-logo](/home/sub/parkminseob.github.io/assets/images/post/java/java-logo.png)
 
 ## 클래스 로딩 과정
 $ java com.eomcs.oop.ex03.Exam0130  
@@ -39,9 +39,9 @@ $ java com.eomcs.oop.ex03.Exam0130
 
 7) main() 메서드를 호출한다.
    - 클래스를 실행하는 것이라면 main() 메서드를 찾아 실행한다.
-   
+
    ![](https://images.velog.io/images/minseobcms/post/f1c0d9f6-e6cc-473b-bed3-30dbbeeaabce/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7,%202020-08-11%2019-58-08.png)
-   
+
 ## JVM이 관리하는 메모리 영역
  1) Heap
  - new 명령으로 생성한 인스턴스가 놓인다.

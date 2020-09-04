@@ -22,7 +22,7 @@ tags:
   - Java basic
 ---
 
-![java-logo](https://user-images.githubusercontent.com/68311188/91867408-9797e400-ecae-11ea-846c-22adf8b1d152.jpg)
+![java-logo](/home/sub/parkminseob.github.io/assets/images/post/java/java-logo.png)
 
 ## 비트이동연산자?
 비트연산자는 정수값을 비트 단위로 연산할 수 있다.  
