@@ -34,13 +34,11 @@ tags:
    서브클래스들의 공통 분모를 추출하여 수퍼클래스(추상 클래스)를 정의하는 방법을 말한다.
    그래서 이런 상속을 "일반화/표준화(generalization)"이라 부른다. 이 포스트에선 일반화 상속, 즉 추상클래스에 대해서 설명할 것이다.
 
-[]: https://parkminseob.github.io/java/java-extends/	"전문화 상속을 설명한 링크"
-
-
+[전문화 상속을 설명한 링크]: https://parkminseob.github.io/java/java-extends/
 
 ## 추상클래스 선언
 
--------
+
 
 추상클래스를 선언할 때는 클래스 선언에 `abstract` 키워드를 붙여야 한다. `abstract`를 붙이면 new 연산자를 이용해서 객체를 만들지 못하고, 상속을 통해서만 자식 클래스를 만들 수 있다.
 
@@ -117,7 +115,7 @@ public class Truck extends Car {
 
 ## 추상메서드 선언
 
-------
+
 
 위 예제에서 Sedan과 Truck클래스에서 공통적으로 run()메서드를 사용하는 것을 알 수 있다. 
 
