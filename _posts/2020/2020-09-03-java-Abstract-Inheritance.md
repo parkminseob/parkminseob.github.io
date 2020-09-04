@@ -19,11 +19,11 @@ tags:
   - Inheritance
 ---
 
+![java-logo](https://user-images.githubusercontent.com/68311188/92201199-e4e6a200-eeb6-11ea-9f5b-76b79db3564f.png)
+
 # 추상클래스(Abstract)
 
-----
 
-![java-logo](/home/sub/parkminseob.github.io/assets/images/post/java/java-logo.png)
 
 상속에는 크게 두가지 종류가 있다.
 
@@ -36,7 +36,7 @@ tags:
    서브클래스들의 공통 분모를 추출하여 수퍼클래스(추상 클래스)를 정의하는 방법을 말한다.
    그래서 이런 상속을 "일반화/표준화(generalization)"이라 부른다. 이 포스트에선 일반화 상속, 즉 추상클래스에 대해서 설명할 것이다.
 
-
+[전문화 상속을 설명한 포스트](https://parkminseob.github.io/java/java-Inheritance-extends/)
 
 ## 추상클래스 선언
 

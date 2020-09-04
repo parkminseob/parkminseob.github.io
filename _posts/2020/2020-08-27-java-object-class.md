@@ -21,7 +21,7 @@ tags:
   - Java basic
 ---
 
-![java-logo](/home/sub/parkminseob.github.io/assets/images/post/java/java-logo.png)
+![java-logo](https://user-images.githubusercontent.com/68311188/92201199-e4e6a200-eeb6-11ea-9f5b-76b79db3564f.png)
 
 * Object 클래스는 자바의 최상위 클래스이다.  
 클래스를 정의할 때 수퍼클래스를 지정하지 않으면 컴파일러는 자동으로 Object를 상속받는다.  

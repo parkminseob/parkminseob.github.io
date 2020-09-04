@@ -9,7 +9,7 @@ tags:
   - OOP
 ---
 
-![java-logo](/home/sub/parkminseob.github.io/assets/images/post/java/java-logo.png)
+![java-logo](https://user-images.githubusercontent.com/68311188/92201199-e4e6a200-eeb6-11ea-9f5b-76b79db3564f.png)
 
 * 객체지향을 잘 하고싶다면 모든 인스턴스를 사람처럼 생각해보자.  
 `obj1.print3();`  
