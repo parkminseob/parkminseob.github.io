@@ -649,12 +649,52 @@ public class StudentHandler {
 
 ```
 
+
+
+## Prompt클래스
+
+입출력 관련한 Prompt명령을 모아두었다.
+
+```java
+package mini.project;
+
+import java.util.Scanner;
+
+public class Prompt {
+	static Scanner keyboardScan = new Scanner(System.in);
+
+	public static String inputString(String title) {
+		System.out.print(title);
+		return keyboardScan.nextLine();
+	}
+
+	public static int inputInt(String title) {
+		return Integer.parseInt(inputString(title));
+	}
+
+	public static void close() {
+		keyboardScan.close();
+	}
+}
+
+
+```
+
+
+
+## 후기
+
 이렇게 24시간, 정확히는 잠자고 밥먹는 시간을 제외한 14시간만에 팀원 한명과 태그를 이뤄 성적조회 프로그램을 만들었다. 
+
+
 
 미니 해커톤이지만 긴장감을 가지고 처음으로 누군가와 협업을 하며 프로그램을 어떻게 구현할지 고민하는 시간을 가질 수 있었다.
 
 
+
 특히 간단하게만 생각했던 CRUD조차도 막상 처음부터 만들자니 자잘한 버그가 많이 발생했고, 그런 버그들을 고치는데 시간이 많이 들었다. 기능을 만드는 것 보다 유효성 검사를 꼼꼼히 해주며 프로그램이 단단해지도록(?) 하는게 더 어려웠다.
+
+
 
 미숙하지만 결과물을 내고 나니 한층 더 자신감이 붙는걸 느낄 수 있었다. 재밌었음!
 
