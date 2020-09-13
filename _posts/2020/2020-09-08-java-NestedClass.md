@@ -48,12 +48,15 @@ class Class{ // top level class
    - 바깥 클래스의 인스턴스에 종속되는 클래스
    - 바깥 클래스의 인스턴스 없이는 생성할 수 없다.
 3. local class
+   
    - 특정 메서드 안에서만 사용되는 클래스
 4. anonymous class(익명클래스)
    - 클래스의 이름이 없다.
    - 클래스를 정의하는 동시에 인스턴스를 생성해야 한다.
    - 클래스 이름이 없기 때문에 생성자를 정의할 수 없다.
    - 단 한 개의 인스턴스만 생성해서 사용할 경우 익명 클래스를 적용한다.
+   
+   [익명클래스를 설명한 링크](https://parkminseob.github.io/java/java-anonymousClass/)
 
 --------
 
