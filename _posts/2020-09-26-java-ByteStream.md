@@ -1,6 +1,6 @@
 ---
 
-title: 자바 - 입출력 스트림(File)
+title: 자바 - 입출력 스트림
 layout: single
 author_profile: true
 read_time: true
@@ -20,3 +20,5 @@ tags:
 ---
 
 ![java-logo](https://user-images.githubusercontent.com/68311188/92201199-e4e6a200-eeb6-11ea-9f5b-76b79db3564f.png){:.aligncenter}
+
+## 
