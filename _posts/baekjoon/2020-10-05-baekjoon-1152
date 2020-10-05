@@ -1,0 +1,53 @@
+---
+title: (백준) 자바 - 3058 짝수를 찾아라
+layout: single
+author_profile: true
+read_time: true
+comments: true
+share: true
+related: true
+categories: 
+- baekjoon
+toc: true
+toc_sticky: true
+toc_label: on this page
+article_tag1: Java
+article_tag2: basic
+tags:
+  - 백준
+  - 알고리즘
+---
+
+[https://www.acmicpc.net/problem/1152](https://www.acmicpc.net/problem/1152)
+
+
+
+## 내 코드
+
+```java
+package com.baekjoon;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class backjoon1152 {
+  public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    String[] str = br.readLine().split(" ");
+    int count = str.length;
+    for(int i = 0; i < str.length; i++) {
+      if(str[i].equals("")) {
+        count--;
+      }
+    }
+    System.out.println(count);
+  }
+}
+
+```
+
+
+
+## 느낀점
+
+처음으로 버퍼를 써서 성공한 문제. 이 문제의 함정은 앞뒤 공백처리를 어떻게 할 것인가인데, 공백을 for문을 돌려 제거해서 풀었다.
