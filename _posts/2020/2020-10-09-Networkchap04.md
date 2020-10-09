@@ -1,6 +1,5 @@
 ---
-
-title: 모두의 네트워크 Chap4 - 데이터 링크 계층 : 랜에서 데이터 전송하기
+title: 모두의 네트워크 Chap4 - 데이터 링크 계층
 layout: single
 author_profile: true
 read_time: true
