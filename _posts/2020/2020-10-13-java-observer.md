@@ -1,12 +1,4 @@
----
-title: 디자인 패턴 : 옵저버(Observer Design Pattern)
-toc : true
-categories:
-  - java
-tags:
-  - design pattern
-  - observer
----
+디자인 패턴 - 옵저버
 
 ![java-logo](https://user-images.githubusercontent.com/68311188/92201199-e4e6a200-eeb6-11ea-9f5b-76b79db3564f.png)
 
@@ -19,26 +11,6 @@ tags:
 이에 대한 해결책으로 기존 코드를 손대지 않고 새 기능을 추가하는 방법 중 하나가 Observer 디자인 패턴으로 설계하는 것이다. 
 
 > Observer는 '관찰자' 라는 뜻으로 능동형 이지만, 실제로는 Listener형태의 수동형으로 돌아간다.
-
-
-
-*** 정리**
-
-***\*Observer 디자인 패턴\****은,
-
-\- 특정 객체의 상태 변화에 따라 수행해야 하는 작업이 있을 경우,
-
- 기존 코드를 손대지 않고 손쉽게 기능을 추가하거나 제거할 수 있는 설계 기법이다.
-
-\- ***\*발행(publish)/구독(subscribe) 모델\**** 이라고 부르기도 한다.
-
-\- 발행 측(publisher)에서는 구독 객체(subscriber)의 목록을 유지할 컬렉션을 가지고 있다.
-
-\- 또한 구독 객체를 등록하거나 제거하는 메서드가 있다.
-
-\- 구독 객체를 ***\*리스너(listener)\**** 또는 ***\*관찰자(observer)\**** 라 부르기도 한다.
-
-
 
 ![image](https://user-images.githubusercontent.com/68311188/95754430-fb65f180-0cdd-11eb-8f6d-c8d2e7b3dc60.png)
 
