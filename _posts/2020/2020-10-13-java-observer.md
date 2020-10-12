@@ -1,5 +1,5 @@
 ---
-title: 자바 - 디자인 패턴 : 옵저버(Observer Design Pattern)
+title: 디자인 패턴 : 옵저버(Observer Design Pattern)
 toc : true
 categories:
   - java
