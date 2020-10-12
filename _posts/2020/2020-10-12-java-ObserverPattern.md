@@ -18,7 +18,7 @@ tags:
   - design pattern
 ---
 
-![java-logo](https://user-images.githubusercontent.com/68311188/92201199-e4e6a200-eeb6-11ea-9f5b-76b79db3564f.png){:.aligncenter}
+![java-logo](https://user-images.githubusercontent.com/68311188/92201199-e4e6a200-eeb6-11ea-9f5b-76b79db3564f.png)
 
 # Observer디자인 패턴
 
@@ -167,7 +167,6 @@ public class LightOffCarObserver implements CarObserver {
 ```
 
 
-
 ### Test
 
 기능을 추가할때마다 메서드를 추가하고, 차가 잘 굴러가는지 테스트한다.
@@ -188,6 +187,3 @@ public class Test01 {
   }
 }
 ```
-
-
-
