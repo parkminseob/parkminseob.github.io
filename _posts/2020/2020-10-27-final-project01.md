@@ -1,12 +1,12 @@
 ---
 title: [국비교육 자바 파이널 프로젝트 일지] - 01
-toc : true
 categories:
-project
+- project
+toc: true
+toc_label: on this page
 tags:
-project
-java
-국비교육
+  - Java
+  - project
 ---
 
 # 국비교육 자바 파이널 팀프로젝트 일지 - 01
