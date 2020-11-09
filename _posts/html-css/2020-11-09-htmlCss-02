@@ -1,0 +1,343 @@
+---
+title: Doit html/css - 폼 관련 태그들
+categories:
+- html
+- css
+toc: true
+toc_label: on this page
+tags:
+  - html
+  - css
+---
+
+# 폼 관련 태그들
+
+## 폼 만들기 - form태그
+
+사용자가 웹 사이트로 정보를 보낼 수 있는 요소들은 모두 폼(form)이라고 할 수 있다.
+
+`<form>`태그는 폼을 만드는 가장 기본적인 태그이다.
+
+```html
+기본형 : <form [속성="속성 값"]> 여러 폼 요소 </form>
+```
+
+### form 태그의 속성
+
+- method : 사용자가 입력한 내용을 서버 쪽 프로그램으로 어떻게 넘겨줄지 지정한다.
+  - 속성 값
+    1. get : 주소 표시줄에 사용자가 입력한 내용이 그대로 드러난다. 256~4096byte까지의 데이터만 서버로 넘길 수 있다.
+    2. post : 대부분 이 방식을 사용한다. 사용자의 입력을 표준입력(standard input)으로 넘겨주기 때문에 입력 내용의 길이에 제한을 받지 않고 사용자가 입력한 내용이 드러나지 않는다.
+- name : 폼의 이름을 지정한다. 한 문서 안에 여러개의 `form`태그가 있을 경우 폼들을 구분하기 위해 사용한다.
+- action : `form`태그 안의 내용들을 처리해 줄 서버 상의 프로그램을 지정
+- target : action 속성에서 지정한 스크립트 파일을 현재 창이 아닌 다른 위치에 열도록 지정
+
+```html
+검색창을 만드는 폼 태그
+<form action="search.php" method="POST">
+    <input type="text" title="검색">
+    <input type="submit" value="검색">
+</form>
+```
+
+- 사용자의 검색 내용을 받아 처리하는 서버 프로그램(예를 들어 search.php)는 따로 서버 프로그래밍 언어를 공부해 작성해야 한다. html은 UI만 제공한다.
+
+
+
+#### 자동완성 기능 - `autocomplete`
+
+사용자가 입력했던 내용을 기억했다가 비슷한 내용을 입력할 경우, 이전에 입력했던 내용을 힌트로 보여준다. 이러한 기능은 ``autocomplete`속성을 이용한다. 기본값은 `on`으로 설정되어 있다. 비밀번호와 같이 중요한 정보를 입력할때는 `off`로 해두는 것이 좋다.
+
+```html
+<form action="register.php" autocomplete="off">
+...
+</form>
+```
+
+
+
+### `<label>`태그 - 폼 요소에 레이블 붙이기
+
+레이블이란 입력 창 옆에 `아이디`나 `비밀번호`처럼 붙여놓은 텍스트를 뜻한다. `<label>`태그를 사용하면 폼 요소와 레이블 텍스트가 서로 연결되어 있다는 것을 브라우저가 알 수 있다.
+
+```
+기본형 : <label for="id이름">레이블</label>
+		<input id ="id이름" [속성 = "속성 값"]>
+		
+<label for="user-id">아이디(6자 이상)</label>
+<input type="text" id="user-id">
+```
+
+- `<input>`태그는 폼에서 사용자 입력을 받기 위해 사용하는 태그이다.
+
+- 위 예시를 이용하면 `<label>`태그를 사용한 텍스트 부분과 사용자 입력을 받는 `<input>`소스가 떨어져 있더라도 둘 사이를 쉽게 연결할 수 있다는 장점이 있다.
+
+```html
+라벨을 이용해 체크박스 만들기
+
+<form>
+    <h3>수강 분야(다수 선택 가능)</h3>
+    <ul>
+        <li><input type="checkbox" value="grm">문법</li>
+        <li><input type="checkbox" value="grm">작문</li>
+        <li><input type="checkbox" value="grm">독해</li>
+    </ul>
+    
+    <h3>수강 과목(1과목만 선택 가능)</h3>
+    <ul>
+        <li>
+            <label><input type="radio" name="subject" value="eng">영어회화</label>
+        </li>
+        <li>
+            <label><input type="radio" name="subject" value="ch">중국어회화</label>
+        </li>
+        <li>
+            <label><input type="radio" name="subject" value="jp">일어회화</label>
+        </li>
+    </ul>
+</form>
+```
+
+- `수강분야`의 태그들은 `label`태그를 사용하지 않아서 텍스트를 클릭해도 체크박스 버튼이 선택되지 않는다.
+- `수강과목`의 태그들은 `label`태그를 사용했기 때문에 텍스트만 클릭해도 왼쪽 라디오 버튼이 선택된다. 최근 대부분의 폼은 모바일 유저를 고려하여 `label`을 사용한다.
+
+
+
+### `<fieldset>`, `<legend>`태그 - 폼 요소 그룹으로 묶기
+
+쇼핑몰 사이트에서 주문서를 작성하는 폼에 `사용자 정보`와 `배송 정보`를 나누어 표시하면 사용자가 정보를 입력하기도 편하고 화면도 깔끔히 정리할 수 있다. 이렇게 하나의 폼 안에서 여러 구역을 나누어 표시하려고 할 때 `<fieldset>`, `<legend>`태그를 사용한다.
+
+```html
+<form>
+    <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+            <li>
+                <label for="name">이름</label>
+                <input type="text" id="name">
+            </li>
+            <li>
+                <label for="mail">메일 주소</label>
+                <input type="text" id="mail">
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>로그인 정보</legend>
+        <ul>
+            <li>
+                <label for="id">아이디</label>
+                <input type="text" id="id">
+            </li>
+            <li>
+                <label for="pwd">비밀번호</label>
+                <input type="text" id="pwd">
+            </li>
+        </ul>
+    </fieldset>
+</form>
+```
+
+
+
+## 사용자 입력을 위한 `<input>`태그
+
+`<input>`태그는 사용자 입력을 받기위해 사용하는 태그이다. 넣을 수 잇는 항목은 아이디나 비밀번호를 비롯해 이메일주소, 전화번호, 날짜, 시간, 이미지 등 다양하다. 이렇게 다양한 옵션 중 무엇이 될지는 `type`속성에서 결정된다.
+
+### 입력 항목 만들기
+
+웹에서의 폼은 크게 사용자가 입력하는 부분과 입력한 내용을 서버로 보내는 버튼 부분으로 나눌 수 있다. 그 중 사용자 입력을 받을 때 `<input>`태그를 사용한다. 체크박스나 로그인 버튼처럼 사용자가 클릭하는 버튼도 `<input>`태그를 이용한다.
+
+#### ID속성 사용하기
+
+폼을 만들다 보면 똑같은 폼 요소가 여러 번 사용된다. 여러번 사용된 폼 요소를 구분하기 위해 사용하는 것이 `id`속성이다. `id`를 지정해두면 `<label>`태그를 이용해 캡션을 붙일 수도 있고 CSS를 이용해 각 요소마다 다른 형태로 꾸밀 수도 있다.
+
+`id`속성 값은 최소한 한개 이상의 문자여야 하고 공백이 있어서는 안됀다.
+
+#### `<input>`태그의 `type`속성에서 사용 가능한 유형
+
+| 유형           | 설명                                                       |
+| -------------- | ---------------------------------------------------------- |
+| hidden         | 사용자에게는 보이지 않지만 서버로 넘겨지는 값을 가진다.    |
+| text           | 한 줄짜리 텍스트를 입력할 수 있는 텍스트 상자를 넣는다.    |
+| search         | 검색 상자를 넣는다.                                        |
+| tel            | 전화번호 입력 필드를 넣는다.                               |
+| url            | URL주소를 입력할 수 있는 필드를 넣는다.                    |
+| email          | 메일 주소를 입력할 수 있는 필드를 넣는다.                  |
+| password       | 비밀번호를 입력할 수 있는 필드를 넣는다.                   |
+| datetime       | 국제 표준시(UTC)로 설정된 날짜와 시간을 넣는다.            |
+| datetime-local | 사용자가 있는 지역을 기준으로 날짜와 시간을 넣는다.        |
+| date           | 사용자 지역을 기준으로 날짜(연,월,일)를 넣는다.            |
+| month          | 사용자 지역을 기준으로 날짜(연,월)를 넣는다.               |
+| week           | 사용자 지역을 기준으로 날짜(연,주)를 넣는다.               |
+| time           | 사용자 지역을 기준으로 시간을 넣는다.                      |
+| number         | 숫자를 조절할 수 있는 화살표를 넣는다.                     |
+| range          | 숫자를 조절할 수 있는 슬라이드 막대를 넣는다.              |
+| color          | 색상 표를 넣는다.                                          |
+| checkbox       | 주어진 항목에서 2개 이상 선택 가능한 체크박스를 넣는다.    |
+| radio          | 주어진 항목에서 1개만 선택할 수 있는 라디오 버튼을 넣는다. |
+| file           | 파일을 첨부할 수 있는 버튼을 넣는다.                       |
+| submit         | 서버 전송 버튼을 넣는다.                                   |
+| image          | submit 버튼 대신 사용할 이미지를 넣는다.                   |
+| reset          | 리셋 버튼을 넣는다.                                        |
+| button         | 버튼을 넣는다.                                             |
+
+#### `type="hidden"` - 히든 필드 만들기
+
+히든 필드는 화면상의 폼에는 보이지 않지만 사용자가 입력을 마치고 폼을 서버로 전송할 때 서버로 함께 전송되는 요소이다. 보통 사용자에게 굳이 보여 줄 필요가 없지만 관리자는 알아야 하는 것을 히든 필드로 입력한다.
+
+웹사이트 회원가입창에서 아이디 칸의 태그를 보면 아이디가 중복되는지 체크하고 서버로 전송할 때 hidden필드 값과 함게 서버로 전송되는 것을 알 수 있다.
+
+```html
+<input type="hidden" id="agreement" name="agreement" value="Y">
+```
+
+#### `type="text"` - 텍스트 필드 만들기
+
+텍스트 필드는 한 줄짜리 일반 텍스트를 입력하는 필드이다. 폼에서 가장 많이 사용하는 요소로 주로 아이디나 이름, 주소 등 텍스트를 입력할 때 사용한다.
+
+텍스트 필드에서 사용할 수 있는 속성은 다음과 같다.
+
+| 속성      | 설명                                                         |
+| --------- | ------------------------------------------------------------ |
+| name      | 텍스트 필드를 구별할 수 있도록 이름을 붙인다.                |
+| size      | 텍스트 필드의 길이를 지정한다. 즉 화면에 몇 글자가 보이도록 할 것인지 지정한다. (예 : 최대입력수가 10개인데 size를 5로 지정하면 5글자만 보인다.) |
+| value     | 텍스트 필드 요소가 화면에 표시될 때 텍스트 필드 부분에 표시될 내용이다. 이 속성을 사용하지 않으면 빈 텍스트 필드가 표시된다. |
+| maxlength | 텍스트 필드에 입력할 수 있는 최대 문자 개수를 지정한다.      |
+
+#### `type="password"` - 비밀번호 입력란 만들기
+
+`password`는 문자 그대로 비밀번호 입력란을 만든다. 다만 아이디와 달리 비밀번호는 노출 되선 안되기 때문에 화면에 `*`와 같은 기호로 표시해야한다. 속성도 value가 없다는 점을 제외하면 `text`필드와 같다.
+
+#### `type="number"` - 숫자 입력하기, `type="range"` - 슬라이드 막대로 숫자 지정하기
+
+- `number`를 사용하면 사용자가 입력한 내용을 숫자로 인식한다. 
+
+```html
+<b>주문 개수 : </b> <input type="number" min="1" max="5" value="1">개
+```
+
+- `range`태그는 슬라이드 막대를 움직여 숫자 값을 입력하게 한다.
+
+`number`필드와 `range`필드에서 사용할 수 있는 속성은 다음과 같다.
+
+| 속성  | 설명                                                         |
+| ----- | ------------------------------------------------------------ |
+| min   | 필드에 입력할 수 있는 최솟값을 지정한다. type="range"일 때 기본 최소값 : 0 |
+| max   | 필드에 입력할 수 있는 최댓값을 지정한다. type="range"일 때 기본 최댓값 : 100 |
+| step  | 짝수나 홀수 등 특정 숫자로 제한하려고 할 때 숫자 간격을 지정할 수 있다. 기본 값은 1이며 생략 가능하다. |
+| value | 필드에 표시할 초기값.                                        |
+
+```html
+<ul>
+    <li>
+        <label class="reg" for="member">참여인원<small>(최대10명)</small></label>
+        <input type="number" id="member" value="1" min="0" max="10" step="1">
+    </li>
+    <li>
+        <label class="reg" for="stuffs">지원물품<small>(인당 5개)</small></label>
+        <input type="number" id="stuffs" value="1" min="0" max="50" step="5">
+    </li>
+    <li>
+        <label class="reg" for="satis">희망 단계<small>(하,중,상)</small></label>
+        <input type="range" id="satis" value="1" min="1" max="3">
+    </li>
+</ul>
+```
+
+
+
+#### `type="radio"`, `type="checkbox"` - 라디오 버튼과 체크박스
+
+라디오 버튼은 여러 요소 중 한 개만 선택하도록 할 경우 사용하고 체크박스 버튼은 복수 선택을 할 때 쓴다. 사용할 수 있는 속성은 다음과 같다.
+
+| 속성    | 설명                                                         |
+| ------- | ------------------------------------------------------------ |
+| name    | 라디오 버튼이나 체크박스가 여러 개 있을 경우 서버의 폼 프로그램에서 라디오 버튼이나 체크박스를 구분하기 위해 이름을 지정한다. 라디오 버튼은 여러 개 중 하나만 선택하는 것이기 때문에 관련 그룹끼리는 name으로 속성 값을 같게 해준다. |
+| value   | 선택한 라디오 버튼이나 체크박스를 서버로 알려 줄 때 넘길 값을 지정한다. 이 값은 영문이거나 숫자여야하며 필수 속성이다. |
+| checked | 라디오 버튼의 항목드은 처음에 아무것도 선택되지 않은 상태로 표시되지만 기본으로 선택해놓을 항목이있다면 checked속성을 사용한다. |
+
+![image-20201110011438870](C:\Users\ireni\AppData\Roaming\Typora\typora-user-images\image-20201110011438870.png)
+
+#### `type="color"` - 색상 선택 상자
+
+```html
+<p>올해과티 색깔 고르세요.</p>
+<label>선호색상 <input type="color" value="#00ff00"></label>
+```
+
+#### `type="date"`,`type="month"`,`type="week"`  - 날짜 표시
+
+```html
+<label><input type="date" id="start"></label>
+<label><input type="date" id="end"></label>
+```
+
+#### `type="time"`,`type="datetime"`,`type="datetime-local"` - 시간 지정
+
+`<input>`태그를 사용하면 날짜뿐 아니라 시간도 지정할 수 있다. 속성은 다음과 같다.
+
+| 속성  | 설명                                                         |
+| ----- | ------------------------------------------------------------ |
+| min   | 날짜나 시간의 최솟값지정                                     |
+| max   | 날짜나 시간의 최댓값지정                                     |
+| step  | 스핀 박스의 화살표를 누를 때마다 날짜나 시간을 얼마나 조절할지 결정한다. |
+| value | 화면에 표시할 초기값을 지정한다. type="time"일 경우 00:00시부터 23:59까지 입력한다. type="datetime"이나 type="datetime-local"유형일 경우 날짜 다음에 키워드 T를 쓰고 24시간제로 시간을 지정한다. |
+
+```html
+<h3>원하는 대관시간 선택하세요.(오늘)</h3>
+<label>시작시간<input type="time" value="09:00" id="start1"></label>
+<label>종료시간<input type="time" value="18:00" id="end1"></label>
+
+<h3>원하는 대관시간 선택하세요.(다른날짜)</h3>
+<label>시작시간<input type="datetime-local" value="2020-11-08T09:00" id="start2"></label>
+<label>종료시간<input type="datetime-local" value="2020-11-09T18:00" id="end2"></label>
+
+```
+
+![image-20201110012739547](C:\Users\ireni\AppData\Roaming\Typora\typora-user-images\image-20201110012739547.png)
+
+
+
+#### `type="submit"`,`type="reset"`-서버전송, 리셋버튼 넣기
+
+리셋버튼은 `<input>`요소에 입력된 모든 정보를 재설정해 사용자가 입력한 내용을 지울 수 있다. 이때 `value`속성을 사용해 버튼에 표시할 내용을 지정한다.
+
+반면 `submit`은 사용자가 폼에 입력한 정보를 서버로 전송하는 submit버튼을 만든다.
+
+```html
+<form action="register.php" method="POST">
+    <label> 메일주소 <input type="text"></label>
+    <input type="submit" value="제출">
+    <input type="reset" value="다시입력">
+</form>
+```
+
+
+
+#### `type="image"` - 이미지 버튼 넣기
+
+image를 이용해 submit버튼 대신 전송 이미지를 넣을 수 있다.
+
+```html
+<label>아이디<input type="text" size="15"></label>
+<label>비밀번호<input type="password" size="15"></label>
+<input type="image" id="butt" src="images/login.jpg" alt="login">
+```
+
+#### `type="button"` - 버튼 넣기
+
+폼 안에 버튼 형태를 만든다. 별다른 기능은 없기 때문에 자바스크립트 함수를 연결해 사용한다.
+
+```html
+<input type="button" value="새 탭 열기" onclick="window.open()">
+```
+
+#### `type="file"` - 파일 첨부하기
+
+file필드를 넣으면 웹 브라우저 화면에 [파일선택]이나 [찾아보기] 등이 표시되는데 이 버튼을 클릭한 후 파일을 선택하면 파일이 첨부된다. 
+
+```html
+<label> 첨부파일 <input type="file"></label>
+```
+
