@@ -40,7 +40,7 @@ $ java com.eomcs.oop.ex03.Exam0130
 7) main() 메서드를 호출한다.
    - 클래스를 실행하는 것이라면 main() 메서드를 찾아 실행한다.
 
-   ![](https://images.velog.io/images/minseobcms/post/f1c0d9f6-e6cc-473b-bed3-30dbbeeaabce/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7,%202020-08-11%2019-58-08.png)
+
 
 ## JVM이 관리하는 메모리 영역
  1) Heap

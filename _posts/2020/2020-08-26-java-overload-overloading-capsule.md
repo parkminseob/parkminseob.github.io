@@ -131,8 +131,7 @@ public class Exam01 {
 }
     
 ```
-그림으로 표현하면 다음과 같다.
-![](https://images.velog.io/images/minseobcms/post/54c0a182-c50c-4dea-98dc-9b71eb8279d5/20200812_202450.jpg)
+
 
 
 - 오버라이딩이 되지 않은 예! (annotation의 중요성)
